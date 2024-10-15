@@ -523,7 +523,7 @@
     </site>
   </distributionManagement>
   <properties>
-    <revision>2.6.1-SNAPSHOT</revision>
+    <revision>2.6.0-1.0</revision>
     <!-- override on command line to have generated LICENSE files include
          diagnostic info for verifying notice requirements -->
     <license.debug.print.included>false</license.debug.print.included>
@@ -548,11 +548,11 @@
     <java.min.version>${compileSource}</java.min.version>
     <!-- Dependencies -->
     <hadoop-two.version>2.10.2</hadoop-two.version>
-    <hadoop-three.version>3.3.5</hadoop-three.version>
+    <hadoop-three.version>3.3.6-1.0</hadoop-three.version>
     <!-- These must be defined here for downstream build tools that don't look at profiles.
          They ought to match the values found in our default hadoop profile, which is
          currently "hadoop-2.0". See HBASE-15925 for more info. -->
-    <hadoop.version>${hadoop-two.version}</hadoop.version>
+    <hadoop.version>${hadoop-three.version}</hadoop.version>
     <hadoop.guava.version>11.0.2</hadoop.guava.version>
     <compat.module>hbase-hadoop2-compat</compat.module>
     <assembly.file>src/main/assembly/hadoop-two-compat.xml</assembly.file>
@@ -3924,10 +3924,6 @@
                 <artifactId>guava</artifactId>
               </exclusion>
               <exclusion>
-                <groupId>com.sun.jersey</groupId>
-                <artifactId>jersey-core</artifactId>
-              </exclusion>
-              <exclusion>
                 <groupId>javax.xml.bind</groupId>
                 <artifactId>jaxb-api</artifactId>
               </exclusion>
@@ -4020,10 +4016,6 @@
             <scope>test</scope>
             <exclusions>
               <exclusion>
-                <groupId>com.sun.jersey</groupId>
-                <artifactId>jersey-core</artifactId>
-              </exclusion>
-              <exclusion>
                 <groupId>javax.servlet</groupId>
                 <artifactId>servlet-api</artifactId>
               </exclusion>
@@ -4094,14 +4086,6 @@
             <artifactId>hadoop-hdfs</artifactId>
             <version>${hadoop-three.version}</version>
             <exclusions>
-              <exclusion>
-                <groupId>com.sun.jersey</groupId>
-                <artifactId>jersey-core</artifactId>
-              </exclusion>
-              <exclusion>
-                <groupId>com.sun.jersey</groupId>
-                <artifactId>jersey-server</artifactId>
-              </exclusion>
               <exclusion>
                 <groupId>javax.servlet.jsp</groupId>
                 <artifactId>jsp-api</artifactId>
@@ -4184,10 +4168,6 @@
                 <artifactId>guava</artifactId>
               </exclusion>
               <exclusion>
-                <groupId>com.sun.jersey</groupId>
-                <artifactId>jersey-core</artifactId>
-              </exclusion>
-              <exclusion>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-log4j12</artifactId>
               </exclusion>
@@ -4241,22 +4221,6 @@
             <artifactId>hadoop-common</artifactId>
             <version>${hadoop-three.version}</version>
             <exclusions>
-              <exclusion>
-                <groupId>com.sun.jersey</groupId>
-                <artifactId>jersey-core</artifactId>
-              </exclusion>
-              <exclusion>
-                <groupId>com.sun.jersey</groupId>
-                <artifactId>jersey-json</artifactId>
-              </exclusion>
-              <exclusion>
-                <groupId>com.sun.jersey</groupId>
-                <artifactId>jersey-servlet</artifactId>
-              </exclusion>
-              <exclusion>
-                <groupId>com.sun.jersey</groupId>
-                <artifactId>jersey-server</artifactId>
-              </exclusion>
               <exclusion>
                 <groupId>javax.servlet.jsp</groupId>
                 <artifactId>jsp-api</artifactId>
@@ -4350,10 +4314,6 @@
               <exclusion>
                 <groupId>javax.servlet</groupId>
                 <artifactId>servlet-api</artifactId>
-              </exclusion>
-              <exclusion>
-                <groupId>com.sun.jersey</groupId>
-                <artifactId>jersey-core</artifactId>
               </exclusion>
               <exclusion>
                 <groupId>com.google.code.findbugs</groupId>
